@@ -1,7 +1,7 @@
 # wsb
 WSB files
 
-## larastronka - excercises of LARAVEL framework
+## larastronka - excercises with the LARAVEL framework
 
 ### SQLITE issues after change from mysql
 It was resolved by commenting DB_DATABASE=, thanks to an article: 
