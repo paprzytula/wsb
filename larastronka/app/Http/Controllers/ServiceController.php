@@ -13,4 +13,12 @@ class ServiceController extends Controller
 
         return view('service.index', compact('services'));
     }
+    public function store()
+    {
+        $service = new \App\Service();
+        $service->save();
+        $service->name = request('name');
+
+        return redirect()->back();
+    }
 }

@@ -4,13 +4,19 @@
 
 @section('content')
     <h1>Witam na stronie Usługi</h1>
-    <p>Z dodatkową linią tekstu</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, eum! Voluptate aspernatur at explicabo ipsa nisi asperiores quidem laboriosam amet tempora quisquam labore, assumenda recusandae quam est nesciunt harum rerum.</p>
+   <p>Dodaj usługę</p>
+   <form action="/service" method="POST">
+       <input type="text" name="name" autocomplete="off">
+
+       @csrf
+
+       <button>Dodaj</button>
+   </form>
 
     <ul>
 @forelse ($services as $service)
 
-    <li>{{$service->name}}</li>
+    <li>{{ $service->name }}</li>
     @empty
     <li>W tej chwili nie są dostępne usługi.</li>
 
