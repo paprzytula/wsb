@@ -17,8 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', function(){
-    $variable = 'Hello from Routes.';
-    return view( 'hello',  [ 'someData' => $variable
-    ]);
-});
+Route::get('/about', 'HelloController@about');
+Route::get('/services', 'HelloController@services');
