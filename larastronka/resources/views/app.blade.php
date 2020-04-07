@@ -6,10 +6,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <ul>
-        <li><a href="/about">O mnie</a></li>
-        <li><a href="/services">Usługi</li>
-    </ul>
+    @include('nav')
     @yield('content')
 </body>
 </html>

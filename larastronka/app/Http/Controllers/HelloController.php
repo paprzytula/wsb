@@ -12,6 +12,8 @@ class HelloController extends Controller
     }
     public function services()
     {
-       return view('services');
+    $services = \App\Service::all();
+
+       return view('services', compact('services'));
     }
 }
