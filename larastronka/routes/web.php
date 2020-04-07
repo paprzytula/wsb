@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/about', 'HelloController@about');
-Route::view('/app', 'app');
-Route::get('/services', 'HelloController@services');
+/*Route::view('/app', 'app');*/
+Route::get('/services', 'ServiceController@index');
