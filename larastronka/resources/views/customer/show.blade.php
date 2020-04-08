@@ -10,5 +10,10 @@
 <p>{{ $customer->email }}</p>
 <div>
     <a href="/customers/{{$customer->id}}/edit">Edycja</a>
+    <form action="/customers/{{$customer->id}}" method="POST">
+    @method('DELETE')
+    @csrf
+    <button>Usuń</button>
+    </form>
 </div>
 @endsection

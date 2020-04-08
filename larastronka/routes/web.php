@@ -29,3 +29,4 @@ Route::post('/customers', 'CustomerController@store');
 Route::get('customers/{customer}', 'CustomerController@show');
 Route::get('customers/{customer}/edit', 'CustomerController@edit');
 Route::patch('customers/{customer}', 'CustomerController@update'); // HERE is PATCH, not GET nor POST
+Route::delete('customers/{customer}', 'CustomerController@destroy');
