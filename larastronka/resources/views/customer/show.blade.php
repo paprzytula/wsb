@@ -8,5 +8,7 @@
 
 <strong>Email</strong>
 <p>{{ $customer->email }}</p>
-
+<div>
+    <a href="/customers/{{$customer->id}}/edit">Edycja</a>
+</div>
 @endsection
