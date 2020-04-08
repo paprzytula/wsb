@@ -1,3 +1,7 @@
+@extends('app')
+@section('title', 'Dodaj Klienta')
+@section('content')
+
 <h1>Dodawanie klienta</h1>
 <form action="/customers"  method="POST">
 <div>
@@ -9,6 +13,7 @@
     <input type="text" name="email" placeholder="email" autocomplete="off">
 </div>
 @csrf
-<submit>Dodaj nowego Klienta</submit>
+<button>Dodaj nowego Klienta</button>
 
 </form>
+@endsection
