@@ -2,7 +2,9 @@
 @section('content')
     <h1>Edycja danych Klienta</h1>
     <div>
-        <form action="#" method="POST">
+        <form action="/customers/{{$customer->id}}" method="POST">
+
+@method('PATCH')
 
             <div>
                 <label for="name">Imię</label>
@@ -20,6 +22,7 @@
             </div>
             <br>
             @csrf
+
             <button>Zaktualizuj Klienta</button>
 
         </form>

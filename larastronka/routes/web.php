@@ -28,4 +28,4 @@ Route::get('/customers/create', 'CustomerController@create');
 Route::post('/customers', 'CustomerController@store');
 Route::get('customers/{customer}', 'CustomerController@show');
 Route::get('customers/{customer}/edit', 'CustomerController@edit');
-Route::get('customers/{customer}/patch', 'CustomerController@update');
+Route::patch('customers/{customer}', 'CustomerController@update'); // HERE is PATCH, not GET nor POST
