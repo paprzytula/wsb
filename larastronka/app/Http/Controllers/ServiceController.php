@@ -15,10 +15,9 @@ class ServiceController extends Controller
     }
     public function store()
     {
-        $service = new \App\Service();
-        $service->save();
-        $service->name = request('name');
-
+        \App\Service::create(request()->validate([
+            'name'=>'required|min:5|max:15'
+        ]));
         return redirect()->back();
     }
 }

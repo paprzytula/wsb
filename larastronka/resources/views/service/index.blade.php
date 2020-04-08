@@ -1,4 +1,4 @@
-@extends('app');
+@extends('app')
 
 @section('title', 'Usługi')
 
@@ -12,6 +12,7 @@
 
        <button>Dodaj</button>
    </form>
+    <p style="color: red;">@error('name') {{$message}} @enderror</p>
 
     <ul>
 @forelse ($services as $service)

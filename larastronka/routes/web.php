@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,5 @@ Route::get('/about', 'HelloController@about');
 
 Route::get('/service', 'ServiceController@index');
 Route::post('/service', 'ServiceController@store');
+
+Route::get('/customers', 'CustomerController@index');
