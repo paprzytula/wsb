@@ -26,6 +26,6 @@ remember to add **@csrf** just above submit button (server will generate token f
  ## My extensions for VS Code
  
  **Name**|**Functionality**
- ----------------------------------
+ --------|--------------------------
  [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)|Wraps your selection in HTML tags. Can wrap inline selections and selections that span multiple lines (works with both single selections and multiple selections at once).To use, select one or many chunks of code and press "Alt + W" ("Option + W" for Mac).
  
