@@ -6,7 +6,9 @@
 <a href="/customers/create">Dodaj nowego klienta</a>
 
 @forelse ($customers as $customer)
-<p><strong>{{$customer->name}}</strong> {{ $customer->email}}</p>
+<p><strong>
+    <a href="/customers/{{ $customer->$id }}">{{$customer->name}}</a>
+    </strong> ({{ $customer->email}})</p>
 @empty
     <p>Klienci jeszcze tu nie przyszli...</p>
 @endforelse
