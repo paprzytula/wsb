@@ -1,5 +1,5 @@
 <h1>Dodawanie klienta</h1>
-<form action="/customers" >
+<form action="/customers"  method="POST">
 <div>
     <label for="name">Imię</label>
     <input type="text" name="name" placeholder="Imię" autocomplete="off">
