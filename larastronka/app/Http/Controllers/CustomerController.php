@@ -28,9 +28,11 @@ class CustomerController extends Controller
 
         return redirect('/customers');
     }
-    public function show()
+    public function show($customerId)
     {
-        return view('customer.show');
+        $customer = \App\Customer::findOrFail($customerId);
+    return view('customer.show', compact('customer'));
+
     }
 
 }

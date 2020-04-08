@@ -7,7 +7,7 @@
 
 @forelse ($customers as $customer)
 <p><strong>
-    <a href="/customers/{{ $customer->$id }}">{{$customer->name}}</a>
+    <a href="/customers/{{ $customer->id }}">{{$customer->name}}</a>
     </strong> ({{ $customer->email}})</p>
 @empty
     <p>Klienci jeszcze tu nie przyszli...</p>
