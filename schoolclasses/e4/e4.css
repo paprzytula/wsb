@@ -1,0 +1,14 @@
+table, th, tr, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
+
+tr:nth-child(2n+1) {
+    background-color: rgb(172, 238, 255);
+}
+
+tr:nth-child(1) {
+    background-color: yellow;
+}
