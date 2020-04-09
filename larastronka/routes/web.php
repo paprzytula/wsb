@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// use App\Mail\WelcomeMail;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/email', function () {
+//     Mail::to('email@email.com')->send(new WelcomeMail());
+//     return new WelcomeMail();
+// });
 
 Route::get('/about', 'HelloController@about');
 

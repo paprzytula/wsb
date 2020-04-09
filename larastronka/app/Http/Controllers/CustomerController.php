@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Customer;
+use App\Mail\WelcomeMail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class CustomerController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $customers = Customer::all();
+        $customers = Customer::where('active', $request->query('active', 1))->get();
 
         return view('customer.index', compact('customers'));
     }
@@ -17,6 +19,7 @@ class CustomerController extends Controller
     public function create()
     {
         $customer = new Customer();
+
         return view('customer.create', compact('customer'));
     }
 
@@ -24,6 +27,8 @@ class CustomerController extends Controller
     {
 
         $customer = Customer::create($this->validateData());
+
+        Mail::to($customer->email)->send(new WelcomeMail());
 
         return redirect('/customers/' . $customer->id);
     }

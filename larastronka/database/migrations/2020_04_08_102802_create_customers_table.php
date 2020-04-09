@@ -14,10 +14,11 @@ class CreateCustomersTable extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('email');
             $table->text('notes')->nullable(); //this field is not required
+            $table->unsignedInteger('active')->default(1);
             $table->timestamps();
         });
     }
