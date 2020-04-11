@@ -23,10 +23,12 @@ remember to add **@csrf** just above submit button (server will generate token f
 ### Form - old value, accepted by validation
  `<input type="text" name="name" placeholder="Imię" autocomplete="off" value="{{ old('name') }}">`
  
- ## Project2 - second encounter with the LARAVEL
+ ## FinalProject - second encounter with the LARAVEL
  Using [Coder's Tape - Laravel 6 Beginner](https://www.youtube.com/watch?v=eD4yMI-IR8g&list=PLpzy7FIRqpGC8Jk6gyWdSVdxCVXZAsenQ&index=1)
  
- ## My extensions for VS Code
+
+
+ ## Some of my extensions for VS Code
  
  **Name**|**Functionality**
  --------|--------------------------
