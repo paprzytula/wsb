@@ -43,6 +43,16 @@ Using [Mr Digital - Laravel for Beginners](https://www.youtube.com/watch?v=Hyj0a
 `composer require laravel/ui`  
 `php artisan ui:auth`  
 
+
+**Prevents anonymous (null) users from POST content**
+```
+public function __construct()
+   {
+    $this->middleware('auth');
+   }
+
+```
+
 **Preset with bootstrap scaffolding**
 `php artisan ui bootstrap`  
 run `npm install && npm run dev` to compile your fresh scaffolding.
@@ -66,7 +76,7 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 [XAMPP](https://www.apachefriends.org/index.html)|XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.
 [Node.JS](https://nodejs.org/en/)|Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 [Composer](https://getcomposer.org/download/)|Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
-[Hosts File Editor](https://hostsfileeditor.com/)|Easily edit and manage the hosts file for Windows.
+[~~Hosts File Editor~~](https://hostsfileeditor.com/)|Easily edit and manage the hosts file for Windows. Causing problems by _unused_ functions
 [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)|Intelephense is a high performance PHP language server packed full of essential features for productive PHP development.
 [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)|An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
 
@@ -110,6 +120,10 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 **Go to end of the line**
 `END`  
 
+**VS Code Built in snippets location**
+`C:\Users\pprzy\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions`
+
 
 ## Useful websites
 * [Snippet generator](https://snippet-generator.app/)
+* [Sort JSON](https://r37r0m0d3l.github.io/json_sort/)
