@@ -1,15 +1,25 @@
 # wsb
 WSB files
 
-## larastronka - first excercises with the LARAVEL framework
+## larastronka - first excercises with the LARAVEL framework  
+[larastronka](https://github.com/paprzytula/wsb/tree/master/larastronka)  
+Using [Coder's Tape - Laravel 6 Beginner](https://www.youtube.com/watch?v=eD4yMI-IR8g&list=PLpzy7FIRqpGC8Jk6gyWdSVdxCVXZAsenQ&index=1)
+
+## Project2 - second encounter ("Coder's Tape - Final Project")
+ [Project2](https://github.com/paprzytula/wsb/tree/master/Project2) 
+
+## App1 - third set of excersises  
+[App1](https://github.com/paprzytula/app1)  
+[Mr Digital - Laravel for Beginners](https://www.youtube.com/watch?v=Hyj0aUyGwKE&amp;list=PLgFB6lmeXFOqRC4Sc-RST38jboldiQdds)
+
 
 ### SQLITE issues after change from mysql
 It was resolved by commenting DB_DATABASE=, thanks to an article: 
 https://stackoverflow.com/questions/43140711/database-database-database-sqlite-does-not-exist-database-works-from-artisan
 
-remember to add **@csrf** just above submit button (server will generate token for your page)
 
-### Order of commands in function is important
+
+**### *Order of commands in function is important**
 
  `public function store()
     {
@@ -20,12 +30,24 @@ remember to add **@csrf** just above submit button (server will generate token f
     }`
 
 
-### Form - old value, accepted by validation
- `<input type="text" name="name" placeholder="Imię" autocomplete="off" value="{{ old('name') }}">`
+
+`<input type="text" name="name" placeholder="Imię" autocomplete="off" value="{{ old('name') }}">`
+Form - old value, accepted by validation
  
- ## FinalProject - second encounter with the LARAVEL
- Using [Coder's Tape - Laravel 6 Beginner](https://www.youtube.com/watch?v=eD4yMI-IR8g&list=PLpzy7FIRqpGC8Jk6gyWdSVdxCVXZAsenQ&index=1)
  
+
+
+ 
+`composer require laravel/ui`  
+`php artisan ui:auth`  
+ This enables authorization for Laravel
+
+`php artisan ui bootstrap`  
+Preset with bootstrap scaffolding
+run `npm install && npm run dev` to compile your fresh scaffolding.
+
+`php artisan make:model House -m`
+Creates model with database migration
 
 
  ## Some of my extensions for VS Code
