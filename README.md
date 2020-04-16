@@ -76,8 +76,8 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 [XAMPP](https://www.apachefriends.org/index.html)|XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.
 [Node.JS](https://nodejs.org/en/)|Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 [Composer](https://getcomposer.org/download/)|Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
-[~~Hosts File Editor~~](https://hostsfileeditor.com/)|Easily edit and manage the hosts file for Windows. Causing problems by _unused_ functions
-[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)|Intelephense is a high performance PHP language server packed full of essential features for productive PHP development.
+[Hosts File Editor](https://hostsfileeditor.com/)|Easily edit and manage the hosts file for Windows. 
+[~~PHP Intelephense~~](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)|Intelephense is a high performance PHP language server packed full of essential features for productive PHP development. Causing problems by _unused_ functions
 [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)|An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
 
 
