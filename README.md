@@ -17,6 +17,9 @@ Using [Mr Digital - Laravel for Beginners](https://www.youtube.com/watch?v=Hyj0a
 ## Final Project
 http://pprzytula.pl
 
+Users are registering by themselves.
+There are user roles: Admin, Consultant, Customer.
+
 
 # Rules
 
@@ -140,4 +143,5 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 * [Coder's Tape - Laravel 5.8 Tutorial From Scratch](https://www.youtube.com/watch?v=qiMYkrkXJ6k&list=PLpzy7FIRqpGD0kxI48v8QEVVZd744Phi4&index=1)
 * [Installing Nodejs on hosting via nvm](https://www.youtube.com/watch?v=5vkMI9V66N0)
 * [How to Set Up Command Aliases in Linux/Ubuntu/Debian](https://www.hostingadvice.com/how-to/set-command-aliases-linuxubuntudebian/)
-* [How to install Laravel manually] (https://www.a2hosting.com/kb/installable-applications/manual-installations/laravel1?aid=1656214)
+* [How to install Laravel manually](https://www.a2hosting.com/kb/installable-applications/manual-installations/laravel1?aid=1656214)
+* [Class UserTableSeeder does not exist - Laravel 5.0 php artisan db:seed](https://stackoverflow.com/questions/36206742/class-usertableseeder-does-not-exist-laravel-5-0-php-artisan-dbseed)
