@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=mywbPC1TZnA&list=PLpzy7FIRqpGD0kxI48v8QEVVZd744P
 Route::view('/', 'welcome');
 Route::view('offers', 'offers');
 Route::view('rodo','rodo');
-Route::view('about-us', 'about');
+Route::view('about', 'about');
 Route::get('transfer', function ()
 {
     return view('transfer.index');
@@ -24,13 +24,4 @@ Route::get('history', function ()
 {
     return view('history.index');
 });
-Route::get('customers', function ()
-{
-    $customers = [
-        'John Doe',
-        'Jane Doe',
-        'Bob Budowniczy',
-    ];
-
-    return view('internals.customers', ['customers' =>$customers]); //assigned an alias/key to the variable
-});
+Route::get('customers', 'CustomersController@list'); //passing list function from CustomersController
