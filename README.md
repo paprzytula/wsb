@@ -135,3 +135,5 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 * [Instalacja Composera](https://cyberfolks.pl/pomoc/instalacja-composera/?source=lx)
 * [Mr Digital - Laravel for Beginners](https://www.youtube.com/watch?v=Hyj0aUyGwKE&list=PLgFB6lmeXFOqRC4Sc-RST38jboldiQdds)
 * [Coder's Tape - Laravel 5.8 Tutorial From Scratch](https://www.youtube.com/watch?v=qiMYkrkXJ6k&list=PLpzy7FIRqpGD0kxI48v8QEVVZd744Phi4&index=1)
+* [Installing Nodejs on hosting via nvm](https://www.youtube.com/watch?v=5vkMI9V66N0)
+
