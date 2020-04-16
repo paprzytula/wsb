@@ -14,6 +14,9 @@ Using [Coder's Tape - Laravel 6 Beginner](https://www.youtube.com/watch?v=eD4yMI
 Using [Mr Digital - Laravel for Beginners](https://www.youtube.com/watch?v=Hyj0aUyGwKE&amp;list=PLgFB6lmeXFOqRC4Sc-RST38jboldiQdds)
 
 
+## Final Project
+http://pprzytula.pl
+
 
 # Rules
 
@@ -136,4 +139,5 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 * [Mr Digital - Laravel for Beginners](https://www.youtube.com/watch?v=Hyj0aUyGwKE&list=PLgFB6lmeXFOqRC4Sc-RST38jboldiQdds)
 * [Coder's Tape - Laravel 5.8 Tutorial From Scratch](https://www.youtube.com/watch?v=qiMYkrkXJ6k&list=PLpzy7FIRqpGD0kxI48v8QEVVZd744Phi4&index=1)
 * [Installing Nodejs on hosting via nvm](https://www.youtube.com/watch?v=5vkMI9V66N0)
-
+* [How to Set Up Command Aliases in Linux/Ubuntu/Debian](https://www.hostingadvice.com/how-to/set-command-aliases-linuxubuntudebian/)
+* [How to install Laravel manually] (https://www.a2hosting.com/kb/installable-applications/manual-installations/laravel1?aid=1656214)
