@@ -127,3 +127,11 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 ## Useful websites
 * [Snippet generator](https://snippet-generator.app/)
 * [Sort JSON](https://r37r0m0d3l.github.io/json_sort/)
+
+## Used tips
+* [Could not open input file: artisan](https://stackoverflow.com/questions/26193314/could-not-open-input-file-artisan) 
+* [How to install laravel app in subfolder of shared host?](https://stackoverflow.com/questions/41407758/how-to-install-laravel-app-in-subfolder-of-shared-host)
+* [Composer: Command Not Found](https://stackoverflow.com/questions/34028282/composer-command-not-found)
+* [Instalacja Composera](https://cyberfolks.pl/pomoc/instalacja-composera/?source=lx)
+* [Mr Digital - Laravel for Beginners](https://www.youtube.com/watch?v=Hyj0aUyGwKE&list=PLgFB6lmeXFOqRC4Sc-RST38jboldiQdds)
+* [Coder's Tape - Laravel 5.8 Tutorial From Scratch](https://www.youtube.com/watch?v=qiMYkrkXJ6k&list=PLpzy7FIRqpGD0kxI48v8QEVVZd744Phi4&index=1)
