@@ -20,6 +20,10 @@ http://pprzytula.pl
 Users are registering by themselves.
 There are user roles: Admin, Consultant, Customer.
 
+// TODO add PESEL verification
+// TODO add banking functionality
+
+
 
 # Rules
 
@@ -145,3 +149,5 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 * [How to Set Up Command Aliases in Linux/Ubuntu/Debian](https://www.hostingadvice.com/how-to/set-command-aliases-linuxubuntudebian/)
 * [How to install Laravel manually](https://www.a2hosting.com/kb/installable-applications/manual-installations/laravel1?aid=1656214)
 * [Class UserTableSeeder does not exist - Laravel 5.0 php artisan db:seed](https://stackoverflow.com/questions/36206742/class-usertableseeder-does-not-exist-laravel-5-0-php-artisan-dbseed)
+* [SQLSTATE\[HY000\]: General error: 1364 Field 'address_street' doesn't have a default value \(SQL: insert into \`users\` \(\`name\`, \`email\`, \`password\`, \`updated_at\`, \`created_at\`\)](https://laracasts.com/discuss/channels/laravel/sqlstatehy000-general-error-1364-field-address-street-doesnt-have-a-default-value-sql-insert-into-users-name-email-password-updated-at-created-at) 
+* [Laravel 5.3 db:seed command simply doesn't work](https://stackoverflow.com/questions/39521913/laravel-5-3-dbseed-command-simply-doesnt-work)
