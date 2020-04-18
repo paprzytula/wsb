@@ -11,15 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // the Eloquent part and disabling and enabling of foreign keys is only intended for development
-        Eloquent::unguard();
-        //disable foreign key check for this connection before running seeders
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-
-        $this->call(UsersTableSeeder::class);
-        $this->call(RolesTableSeeder::class);
-        // supposed to only apply to a single connection and reset it's self
-        // but I like to explicitly undo what I've done for clarity
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        // $this->call(UserSeeder::class);
     }
 }
