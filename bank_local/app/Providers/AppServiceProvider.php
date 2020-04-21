@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace WSB_BANK\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

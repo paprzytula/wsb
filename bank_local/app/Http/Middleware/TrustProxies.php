@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace WSB_BANK\Http\Middleware;
 
-use Fideloper\Proxy\TrustProxies as Middleware;
 use Illuminate\Http\Request;
+use Fideloper\Proxy\TrustProxies as Middleware;
 
 class TrustProxies extends Middleware
 {
