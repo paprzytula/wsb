@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function transfers() {
         return $this->hasMany('WSB_BANK\Transfer');
     }
+    public function roles()
+       {
+        return $this->belongsToMany('WSB_BANK\Role');
+       }
 }

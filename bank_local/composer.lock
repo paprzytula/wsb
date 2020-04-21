@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80ff7b3a67b162386628545340112550",
+    "content-hash": "859095e6651199c33def7cc9a8ad488a",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -511,6 +511,56 @@
             "description": "Highlight PHP code in terminal",
             "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "kduma/polish-validator",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kduma-OSS/L5-polish-validator-rules.git",
+                "reference": "1d21c98b086b7ef1a3bccfc1d93ce25e2e1b03b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kduma-OSS/L5-polish-validator-rules/zipball/1d21c98b086b7ef1a3bccfc1d93ce25e2e1b03b2",
+                "reference": "1d21c98b086b7ef1a3bccfc1d93ce25e2e1b03b2",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "5.*|^6.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "KDuma\\Validator\\PolishValidatorRulesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "KDuma\\Validator\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Krystian Duma",
+                    "email": "git@kduma.tk"
+                }
+            ],
+            "description": "polish Validation rules for Laravel 5 Validator",
+            "keywords": [
+                "laravel",
+                "pesel",
+                "polish",
+                "validation"
+            ],
+            "time": "2019-11-26T21:37:33+00:00"
         },
         {
             "name": "laravel/framework",
