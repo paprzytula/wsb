@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'fname', 'lname', 'pesel','email', 'password', 
     ];
 
     /**
@@ -49,5 +49,13 @@ class User extends Authenticatable
     public function roles()
        {
         return $this->belongsToMany('WSB_BANK\Role');
+       }
+    public function hasAnyRoles($roles)
+       {
+        return null !== $this->roles()->whereIn('name', $roles)->first();
+       }
+       public function hasAnyRole($role)
+       {
+        return null !== $this->roles()->where('name', $role)->first();
        }
 }

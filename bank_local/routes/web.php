@@ -25,3 +25,6 @@ Route::post('/withdraw', 'HomeController@saveWithdraw')->name('saveWithdraw');
 Route::get('/transfer', 'HomeController@transfer')->name('transfer');
 Route::post('/transfer', 'HomeController@saveTransfer')->name('saveTransfer');
 Route::get('/statement', 'HomeController@statement')->name('statement');
+Route::get('/admin', function(){
+return 'you are admin';
+})->middleware(['auth', 'auth.admin']);
