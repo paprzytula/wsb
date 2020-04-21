@@ -18,18 +18,18 @@
             @endif
             <div class="card" id="statement">
                 <div class="card-header">
-                    <h6 class="m-0 font-weight-bold">Statement of Account</h6>
+                    <h6 class="m-0 font-weight-bold">Stan Konta</h6>
                 </div>
                 <div class="card-body p-0">
                     <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">DATETIME</th>
-                                <th scope="col">AMOUNT</th>
-                                <th scope="col">TYPE</th>
-                                <th scope="col">DETAILS</th>
-                                <th scope="col">BALANCE</th>
+                                <th scope="col">DATA</th>
+                                <th scope="col">KWOTA</th>
+                                <th scope="col">RODZAJ</th>
+                                <th scope="col">SZCZEGÓŁY</th>
+                                <th scope="col">SALDO</th>
                             </tr>
                         </thead>
                         <tbody>

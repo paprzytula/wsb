@@ -18,7 +18,7 @@
             @endif
             <ul class="list-group list-unstyled">
                 <li class="list-group-item">
-                    <h5 class="m-0">Transfer Money</h5>
+                    <h5 class="m-0">Przelew Pieniędzy</h5>
                 </li>
                 <li class="list-group-item">
                     <div class="row">
@@ -26,9 +26,9 @@
                             <form method="POST" action="{{ route('saveTransfer') }}">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="" class="col-form-label text-md-right font-weight-bold mx-3">Email address</label>
+                                    <label for="" class="col-form-label text-md-right font-weight-bold mx-3">Adres E-Mail</label>
                                     <div class="col-md-12">
-                                        <input id="email" placeholder="Enter email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <input id="email" placeholder="Podaj E-Mail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -38,10 +38,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="" class="col-form-label text-md-right font-weight-bold mx-3">Amount</label>
+                                    <label for="" class="col-form-label text-md-right font-weight-bold mx-3">Kwota</label>
                                     <div class="col-md-12">
                                         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                                        <input id="amount" min="1" step="0.1" placeholder="Enter amount to deposit" type="number" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount') }}" required autocomplete="amount" autofocus>
+                                        <input id="amount" min="1" step="0.1" placeholder="Podaj kwotę do przelewu" type="number" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount') }}" required autocomplete="amount" autofocus>
 
                                         @error('amount')
                                         <span class="invalid-feedback" role="alert">
@@ -52,7 +52,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-block btn-primary">Transfer</button>
+                                        <button type="submit" class="btn btn-block btn-primary">Przelej</button>
 
                                     </div>
                                 </div>

@@ -37,7 +37,7 @@ class HomeController extends Controller
     }
     public function saveDeposit(Request $request) {
         $message = [
-            'min'=> 'The :attribute must be above :min INR'
+            'min'=> 'Kwota :attribute musi być powyżej :min PLN'
         ];
         $validator = Validator::make($request->all(), [
             'amount' => 'required|min:1|regex:/^\d+(\.\d{1,2})?$/'
@@ -47,9 +47,9 @@ class HomeController extends Controller
         $deposit->amount = $request->amount;
         $save = $deposit->save();
         if($save) {
-            return back()->with('success', 'Cash deposited successfully');
+            return back()->with('success', 'Wpłata zakończona sukcesem.');
         }else {
-            return back()->with('error', 'Something encountered with cash deposit. Please try again');
+            return back()->with('error', 'Coś poszło nie tak z wpłatą. Proszę spróbować ponownie.');
         }
     }
     public function withdraw() {
@@ -57,7 +57,7 @@ class HomeController extends Controller
     }
     public function saveWithdraw(Request $request) {
         $message = [
-            'min'=> 'The :attribute must be above :min INR'
+            'min'=> 'Kwota :attribute musi być powyżej :min PLN'
         ];
         $validator = Validator::make($request->all(), [
             'amount' => 'required|min:1|regex:/^\d+(\.\d{1,2})?$/'
@@ -65,16 +65,16 @@ class HomeController extends Controller
         $balance = $this->getBalence();
         $amount = $request->amount;
         if($balance < $amount) {
-            return redirect()->back()->with('error', 'Insufficient fund to withdraw');
+            return redirect()->back()->with('error', 'Niewystarczające środki na koncie do wypłaty.');
         }else {
             $withdraw = new Withdraw;
             $withdraw->user_id = Auth::user()->id;
             $withdraw->amount = $amount;
             $save = $withdraw->save();
             if($save) {
-                return back()->with('success', 'Cash withdrawed successfully');
+                return back()->with('success', 'Wypłata zakończona sukcesem.');
             }else {
-                return back()->with('error', 'Something encountered with cash withdraw. Please try again');
+                return back()->with('error', 'Coś poszło nie tak z wypłatą. Proszę spróbować ponownie.');
             }
         }
     }
@@ -83,7 +83,7 @@ class HomeController extends Controller
     }
     public function saveTransfer(Request $request) {
         $message = [
-            'min'=> 'The :attribute must be above :min INR'
+            'min'=> 'Kwota :attribute musi być powyżej :min INR'
         ];
         $validator = Validator::make($request->all(), [
             'email' => 'required|string|email|max:255',
@@ -93,16 +93,16 @@ class HomeController extends Controller
         $amount = $request->amount;
         $balance = $this->getBalence();
         if($email === Auth::user()->email) {
-            return redirect()->back()->with('error', 'You cannot transfer fund to yourself. Please try with another registered email');
+            return redirect()->back()->with('error', 'Nie możesz przelać pieniędzy do siebie. Spróbuj innego konta.');
         }else {
             $email_exists = User::where('email', $email)->first();
             if(!$email_exists) {
-                return redirect()->back()->with('error', 'Email address not found. Please try with registered e-mail address.');
+                return redirect()->back()->with('error', 'Adres E-Mail nie został znaleziony. Proszę użyć innego.');
             }else {
                 $transferToEmail = $email_exists->id;
             }
             if($amount > $balance) {
-                return redirect()->back()->with('error', 'Insufficient fund to transfer');
+                return redirect()->back()->with('error', 'Niewystarczające środki na koncie.');
             }
             $transfer = new Transfer;
             $transfer->transferFrom = Auth::user()->id;
@@ -110,9 +110,9 @@ class HomeController extends Controller
             $transfer->amount = $amount;
             $save = $transfer->save();
             if($save) {
-                return back()->with('success', 'Fund Transfered successfully');
+                return back()->with('success', 'Przelew zakończony sukcesem.');
             }else {
-                return back()->with('error', 'Something encountered with fund transfer. Please try again');
+                return back()->with('error', 'Coś poszło nie tak z operacją. Proszę spróbować ponownie.');
             }
         }
         
@@ -126,8 +126,8 @@ class HomeController extends Controller
             $statement[] = [
                 'datetime' => $d->created_at,
                 'amount' => number_format($d->amount, 2, ".", ""),
-                'type' => 'Credit',
-                'details' => 'Deposit',
+                'type' => 'Uznanie',
+                'details' => 'Wpłata',
                 'balance' => $balance=number_format($balance, 2, ".", "")
             ];
         }   
@@ -138,8 +138,8 @@ class HomeController extends Controller
             $statement[] = [
                 'datetime' => $w->created_at,
                 'amount' => number_format($w->amount, 2, ".", ""),
-                'type' => 'Debit',
-                'details' => 'Withdraw',
+                'type' => 'Obciążenie',
+                'details' => 'Wypłata',
                 'balance' => number_format($balance, 2, ".", "")
              ];
         }
@@ -152,8 +152,8 @@ class HomeController extends Controller
             $statement[] = [
                 'datetime' => $ct->created_at,
                 'amount' => number_format($ct->amount, 2, ".", ""),
-                'type' => 'Credit',
-                'details' => 'Transfer from '.$user->email,
+                'type' => 'Uznanie',
+                'details' => 'Przelew od '.$user->email,
                 'balance' => number_format($balance, 2, ".", "")
             ];
         }
@@ -165,8 +165,8 @@ class HomeController extends Controller
             $statement[] = [
                 'datetime' => $dt->created_at,
                 'amount' => number_format($dt->amount, 2, ".", ""),
-                'type' => 'Debit',
-                'details' => 'Transfer to '.$user->email,
+                'type' => 'Obciążenie',
+                'details' => 'Przelew do '.$user->email,
                 'balance' => number_format($balance, 2, ".", "")
             ];
         } 
@@ -174,7 +174,7 @@ class HomeController extends Controller
         $balance = 0;
         $state = [];
         foreach($statement as $s) {
-            if($s['type'] == 'Debit') {
+            if($s['type'] == 'Obciążenie') {
                 $balance-=$s['amount'];
             }else {
                 $balance+= $s['amount'];

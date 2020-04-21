@@ -65,7 +65,7 @@
                             <a class="nav-link" href="{{ route('transfer') }}">
                             <i class="fas fa-exchange-alt"></i>
 
-                            Transfer
+                            Przelew
                             </a>
                         </li>
                         <li class="nav-item {{ \Request::route()->getName()=='statement' ? 'active': '' }}">

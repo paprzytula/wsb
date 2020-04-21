@@ -7,13 +7,13 @@
             <div class="card">
             <div class="card-header font-weight-bold text-center">{{ strtoupper(config('app.name')) }}</div>
                 <div class="card-body">
-                <label class="mx-3 font-weight-bold">Create new account</label>
+                <label class="mx-3 font-weight-bold">Załóż nowe konto</label>
 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group">
-                            <label for="name" class="col-form-label text-md-right font-weight-bold mx-3">{{ __('Name') }}</label>
+                            <label for="name" class="col-form-label text-md-right font-weight-bold mx-3">{{ __('Imię i nazwisko') }}</label>
 
                             <div class="col-md-12">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="col-form-label text-md-right font-weight-bold mx-3">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-form-label text-md-right font-weight-bold mx-3">{{ __('Addres E-Mail') }}</label>
 
                             <div class="col-md-12">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="col-form-label text-md-right font-weight-bold mx-3">{{ __('Password') }}</label>
+                            <label for="password" class="col-form-label text-md-right font-weight-bold mx-3">{{ __('Hasło') }}</label>
 
                             <div class="col-md-12">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -67,7 +67,7 @@
                                     <input class="form-check-input" type="checkbox" name="terms" id="terms" {{ old("terms") ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="terms">
-                                        Agree the <a href="#">terms and policy</a>
+                                        Zgoda na <a href="#">zasady i warunki</a>
                                     </label>
                                 </div>
                                 @error('terms')
@@ -80,14 +80,14 @@
                         <div class="form-group mb-0">
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    {{ __('Create new account') }}
+                                    {{ __('Zakładanie konta') }}
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <p class="my-3 text-muted text-center">Already have an account?
-                    <a href="{{ route('login') }}">{{ __('Sign in') }}</a>
+                <p class="my-3 text-muted text-center">Posiadasz już konto?
+                    <a href="{{ route('login') }}">{{ __('Zaloguj się') }}</a>
                 </p>
             </div>
         </div>
