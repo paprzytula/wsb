@@ -28,3 +28,8 @@ Route::get('/statement', 'HomeController@statement')->name('statement');
 Route::get('/admin', function(){
 return 'you are admin';
 })->middleware(['auth', 'auth.admin']);
+
+Route::namespace('Admin')->prefix('admin')->middleware(['auth', 'auth.admin'])->name('admin.')->group(function(){ //remember to add a DOT
+   Route::resource('/users', 'UserController', ['except'=>['show', 'create', 'store']]); //hide disabled functions
+
+});

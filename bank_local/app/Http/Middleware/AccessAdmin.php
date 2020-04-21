@@ -20,5 +20,10 @@ class AccessAdmin
             return $next($request);
         }
         return redirect('home');
+        
+       // hasAnyRoles(['banker','admin'])
+       //return $next($request);
+       // }
+       // return redirect('home');
     }
 }

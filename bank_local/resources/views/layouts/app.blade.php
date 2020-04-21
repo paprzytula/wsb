@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'WSB BANK') }}</title>
+    <title>{{ config('app.name', 'WSB_BANK') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -30,7 +30,7 @@
             <div class="container">
 
                 <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">
-                    {{ strtoupper(config('app.name', 'Laravel')) }}
+                    {{ strtoupper(config('app.name', 'WSB_BANK')) }}
                 </a>
             </div>
         </nav>
@@ -86,6 +86,13 @@
                                         @csrf
                                     </form>
                         </li>
+                        <ul class="navbar-nav mr-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.users.index') }}">Zarządzanie Użytkownikami</a>
+                        </li>
+                    </ul>
+
                     </ul>
                 </div>
             </div>
