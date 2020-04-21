@@ -156,3 +156,4 @@ https://stackoverflow.com/questions/43140711/database-database-database-sqlite-d
 * [Laravel 5.3 db:seed command simply doesn't work](https://stackoverflow.com/questions/39521913/laravel-5-3-dbseed-command-simply-doesnt-work)
 * [Responsive table view](https://www.cssscript.com/responsive-table-with-pure-css/)
 * [Migration and Seeding Cannot truncate a table referenced in a foreign key constraint](https://gist.github.com/isimmons/8202227)
+* [number_format() causes error “A non well formed numeric value encountered”](https://stackoverflow.com/questions/6542403/number-format-causes-error-a-non-well-formed-numeric-value-encountered/54837091#54837091)
