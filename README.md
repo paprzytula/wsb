@@ -21,10 +21,12 @@ Users are registering by themselves.
 There are user roles: Admin, Consultant, Customer.
 
 // TODO add PESEL verification
-// TODO add banking functionality
-// TODO consider datatables 
-// TODO enable hamburger on mobile
 
+// NOTE php artisan tinker 
+// factory(WSB_BANK\User::class, 10)->create();
+// alternative: php artisan db::seed
+
+// TODO add homepage
 
 
 # Rules

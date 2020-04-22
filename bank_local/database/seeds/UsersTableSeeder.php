@@ -14,6 +14,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::truncate();
+        DB::table('role_user')->truncate();
         $adminRole = Role::where('name', 'admin')->first();
         $bankerRole = Role::where('name', 'banker')->first();
         $userRole = Role::where('name', 'user')->first();
@@ -42,5 +43,7 @@ class UsersTableSeeder extends Seeder
         $admin->roles()->attach($adminRole);
         $banker->roles()->attach($bankerRole);
         $user->roles()->attach($userRole);
+
+   factory(WSB_BANK\User::class, 10)->create();
     }
 }

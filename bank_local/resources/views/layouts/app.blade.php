@@ -98,7 +98,8 @@
             </div>
         </nav>
         @endauth
-        <main class="py-4">
+        <main class="py-4 container">
+            @include('partials.alerts')
             @yield('content')
         </main>
     </div>
