@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\Input;
+use WSB_BANK\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +33,11 @@ return 'you are admin';
 
 Route::namespace('Admin')->prefix('admin')->middleware(['auth', 'auth.admin'])->name('admin.')->group(function(){ //remember to add a DOT
    Route::resource('/users', 'UserController', ['except'=>['show', 'create', 'store']]); //hide disabled functions
-
 });
+
+ 
+            /*  $user = User::where('first_name','LIKE','%'.$q.'%')->orWhere('email','LIKE','%'.$q.'%')->orWhere('last_name','LIKE','%'.$q.'%')->orWhere('pesel','LIKE','%'.$q.'%')->get();
+             }
+             return 'Nic nie znaleziono. Spróbuj jeszcze raz.';*/
+ 
+    

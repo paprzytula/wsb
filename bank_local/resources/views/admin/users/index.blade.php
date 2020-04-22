@@ -4,6 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <h5 class="m-0">Zarządzanie Użytkownikami</h5>
+
             <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -57,6 +58,7 @@
       @endforeach
   </tbody>
 </table>
+{{ $users->links()}}
         </div>
     </div>
 @endsection
