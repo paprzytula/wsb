@@ -19,22 +19,22 @@ class UsersTableSeeder extends Seeder
         $userRole = Role::where('name', 'user')->first();
 
         $admin = User::create([
-            'fname' => 'Admin',
-            'lname' => 'Adminowski',
+            'first_name' => 'Admin',
+            'last_name' => 'Adminowski',
             'email' => 'admin@admin.com',
             'pesel' => 12345678911,
             'password' => bcrypt('password')
         ]);
         $banker = User::create([
-            'fname' => 'Banker',
-            'lname' => 'Bankerowski',
+            'first_name' => 'Banker',
+            'last_name' => 'Bankerowski',
             'email' => 'banker@banker.com',
             'pesel' => 12345678912,
             'password' => bcrypt('password')
         ]);
         $user = User::create([
-            'fname' => 'User',
-            'lname' => 'Userowski',
+            'first_name' => 'User',
+            'last_name' => 'Userowski',
             'email' => 'user@user.com',
             'pesel' => 12345678913,
             'password' => bcrypt('password')

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-7">
-            <h5 class="m-0">Witaj, {{ ucfirst(Auth::user()->name) }}</h5>
+            <h5 class="m-0">Zarządzanie Użytkownikami</h5>
 
         </div>
     </div>
