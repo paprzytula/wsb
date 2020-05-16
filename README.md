@@ -20,13 +20,10 @@ http://pprzytula.pl
 Users are registering by themselves.
 There are user roles: Admin, Consultant, Customer.
 
-// TODO add PESEL verification
 
 // NOTE php artisan tinker 
 // factory(WSB_BANK\User::class, 10)->create();
 // alternative: php artisan db::seed
-
-// TODO add homepage
 
 
 # Rules
