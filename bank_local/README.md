@@ -1,7 +1,7 @@
 ## About Project
 
-This project is about a virtual banking system using Laravel 5.8 with minimal options
-This includes modules like: 
+This project is about a virtual banking system using Laravel 5.8
+Project includes: 
  - [Registration]()
  - [Login]()
  - [Home]()
