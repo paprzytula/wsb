@@ -14,7 +14,7 @@ Using [Coder's Tape - Laravel 6 Beginner](https://www.youtube.com/watch?v=eD4yMI
 Using [Mr Digital - Laravel for Beginners](https://www.youtube.com/watch?v=Hyj0aUyGwKE&amp;list=PLgFB6lmeXFOqRC4Sc-RST38jboldiQdds)
 
 
-## Final Project
+## Final Project: bank_local
 http://pprzytula.pl
 
 Users are registering by themselves.
